@@ -1,15 +1,20 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
+  "manifest_version": 2,
+
+  "name": "Popup Dictionary",
+  "description": "This extension shows a word translation from OED of the currently selected word.",
+  "version": "1.0",
+  
+  "browser_action": {
+      "default_popup": "index.html",
+      "default_title": "Click here!"
+  },
+  "permissions": [
+      "<all_urls>"
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "icons": {
+      "48": "icon.png",
+      "128": "icon.png"
+  },
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
 }

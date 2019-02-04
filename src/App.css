@@ -1,32 +1,99 @@
 .App {
+  width: 350px;
+  min-height: 35px;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+
+#word-definitions, #not-found {
+  position: relative;
+  top: 60px;
+}
+
+#not-found { 
   text-align: center;
+} 
+
+#not-found>h2 {
+  color: #3f51b5;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+h1 {
+  color: #2a2a2a;
+  margin-bottom: 22px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.word {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2a2a2a;
+  margin-right: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.part-of-speech {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f15a24;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section {
+  margin: 0px 20px 32px 0px;
+  border-top: 2px solid #888;
+  padding-top: 4px;
+}
+
+.audio img {
+  width: 10%;
+  height: 10%;
+}
+
+.variant {
+  margin-bottom: 25px;
+}
+
+.green-text {
+  color: #27a058;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 16px;
+}
+
+/* Sub lists. */
+ol {
+  counter-reset: item;
+}
+
+ol>li {
+  display: block
+}
+
+ol>li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+
+ul {
+  list-style: none;
+}
+
+#breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  color: #3f51b5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Display list items side by side */
+#breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+#breadcrumb li+li:before {
+  color: black;
+  content: "/";
 }
